@@ -24,7 +24,7 @@ Dopo un primo tentativo parzialmente fallito con la creazione del linguaggio SMP
 
 Mathematica è un nome storico, suggerito a Stephen Wolfram da Steve Jobs, secondo il principio: "Take the generic name for a thing and then romanticize it". Tuttavia, nei molti decenni questo software è diventato qualcosa di molto più generale della sola matematica. 
 
-Così Stephen spesso definice il "Wolfram Language" come un "linguaggio computazionale", che costituisce una "notazione", che permette ai suoi user di "pensare computazionalmente", in analogia a come l'invenzione della notazione matematica, lontano dall'essere un fatto banale, ha facilitato il pensare scientifico. 
+Così Stephen spesso definice il "Wolfram Language" come un "linguaggio computazionale", che costituisce una "notazione", che permette ai suoi user di "pensare computazionalmente", in analogia a come l'invenzione della notazione matematica, lontano dall'essere un fatto banale, ha facilitato il pensare e gli sviluppi scientifici. 
 
 Infatti il linguaggio Wolfram ad oggi include oltre 6000 funzioni built-in, e spesso basta conoscerne l'esistenza per semplicemente applicarle a dati input e fare senza sforzo grandi cose.
 
@@ -51,6 +51,8 @@ Più in dettaglio per i calcoli matematici sono disponibili ad esempio questi co
 - [Matematica finita](https://www.wolfram.com/wolfram-u/courses/mathematics/introduction-to-finite-mathematics/)
 - [Probabilità](https://www.wolfram.com/wolfram-u/courses/mathematics/introduction-to-probability/)
 - [Statistica](https://www.wolfram.com/wolfram-u/courses/mathematics/introduction-to-statistics/)
+- [Teoria dei giochi](https://www.wolfram.com/wolfram-u/courses/mathematics/introduction-to-decision-process-theory/)
+- [Criptografia](https://www.wolfram.com/wolfram-u/courses/mathematics/introduction-to-cryptography/)
 
 
 Efficace per la matematica è anche questo study group:
@@ -71,4 +73,4 @@ Infine la fonte più ampia a cui attingere è la documentazione del linguaggio W
 
 - [Wolfram Language Documentation](https://reference.wolfram.com/language/?source=nav)
 
-La "punchline" è che Wolfram Research è riuscita a sostenere una filosofia di sviluppo software opposta a quella mainstream dei linguaggi opensource. Siccome per definizione lo sviluppo di questi non viene pagato, rimangono necessariamente o molto limitati (ad esempio Python conta circa 1% delle funzioni built-in di Wolfram) o lasciati allo sviluppo comunitario e volontario senza revisione di esperti. I programmatori usuali quindi devono spendere molto tempo fatica a imparare tutto questo mondo open source disordinato e incompleto, o peggio affidarsi solo a chatbot che rischiano di commettere gravi errori e non insegnano nulla. Invece per esperienza posso garantire che la curva di apprendimento di Wolfram è molto più veloce e piacevole, perché è senza dubbio il "linguaggio computazionale" più curato e esteso.
+La "punchline" è che Wolfram Research è riuscita a sostenere una filosofia di sviluppo software opposta a quella mainstream dei linguaggi opensource. Siccome per definizione lo sviluppo di questi non viene pagato, rimangono necessariamente o molto limitati (ad esempio Python conta circa 1% delle funzioni built-in di Wolfram) o lasciati allo sviluppo comunitario e volontario senza revisione di esperti. I programmatori usuali quindi devono spendere molto tempo e fatica a imparare tutto questo mondo open source disordinato e incompleto, o peggio affidarsi solo a chatbot che rischiano di commettere gravi errori e non insegnano nulla. Invece per esperienza posso garantire che la curva di apprendimento di Wolfram è molto più veloce e piacevole, perché è senza dubbio il "linguaggio computazionale" più curato e esteso.
