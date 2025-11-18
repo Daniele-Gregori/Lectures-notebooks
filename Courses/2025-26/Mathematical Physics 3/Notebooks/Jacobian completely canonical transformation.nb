@@ -1,0 +1,1005 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Wolfram 14.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       154,          7]
+NotebookDataLength[     39971,        997]
+NotebookOptionsPosition[     37358,        942]
+NotebookOutlinePosition[     37778,        959]
+CellTagsIndexPosition[     37735,        956]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Calcolo Jacobiana", "Section",
+ CellChangeTimes->{{3.97244682948507*^9, 
+  3.972446853570999*^9}},ExpressionUUID->"d04b40b8-8cc1-47a3-8a5e-\
+a6d91653fafb"],
+
+Cell[CellGroupData[{
+
+Cell["metodo semplice", "Subsection",
+ CellChangeTimes->{{3.972446649329123*^9, 
+  3.972446651723853*^9}},ExpressionUUID->"cbe94529-6718-4723-b309-\
+3d04f2526cbc"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"q1", "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"Q1", "^", "2"}], "-", 
+     RowBox[{"Q2", "^", "2"}]}], "2"]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"q2", "=", 
+   RowBox[{"Q1", " ", "Q2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p1", "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"P1", " ", "Q1"}], "-", 
+     RowBox[{"P2", " ", "Q2"}]}], 
+    RowBox[{
+     RowBox[{"Q1", "^", "2"}], "+", 
+     RowBox[{"Q2", "^", "2"}]}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p2", "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"P2", " ", "Q1"}], "+", 
+     RowBox[{"P1", " ", "Q2"}]}], 
+    RowBox[{
+     RowBox[{"Q1", "^", "2"}], "+", 
+     RowBox[{"Q2", "^", "2"}]}]]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.9724466578038473`*^9, 3.972446675073783*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"9c81479e-5f9d-4fdc-a771-fb708c84c00e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"D", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"q1", ",", "q2", ",", "p1", ",", "p2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"{", 
+      RowBox[{"Q1", ",", "Q2", ",", "P1", ",", "P2"}], "}"}], "}"}]}], "]"}], 
+  "//", "TableForm"}]], "Input",
+ CellChangeTimes->{{3.972446679125731*^9, 3.972446710743712*^9}},
+ CellLabel->"In[43]:=",ExpressionUUID->"80be0afe-c0e0-47b0-9ebc-ea0deb7a386e"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"Q1", 
+     RowBox[{"-", "Q2"}], "0", "0"},
+    {"Q2", "Q1", "0", "0"},
+    {
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"2", " ", "Q1", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"P1", " ", "Q1"}], "-", 
+           RowBox[{"P2", " ", "Q2"}]}], ")"}]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["Q1", "2"], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}], "2"]]}], "+", 
+      FractionBox["P1", 
+       RowBox[{
+        SuperscriptBox["Q1", "2"], "+", 
+        SuperscriptBox["Q2", "2"]}]]}], 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"2", " ", "Q2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"P1", " ", "Q1"}], "-", 
+           RowBox[{"P2", " ", "Q2"}]}], ")"}]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["Q1", "2"], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}], "2"]]}], "-", 
+      FractionBox["P2", 
+       RowBox[{
+        SuperscriptBox["Q1", "2"], "+", 
+        SuperscriptBox["Q2", "2"]}]]}], 
+     FractionBox["Q1", 
+      RowBox[{
+       SuperscriptBox["Q1", "2"], "+", 
+       SuperscriptBox["Q2", "2"]}]], 
+     RowBox[{"-", 
+      FractionBox["Q2", 
+       RowBox[{
+        SuperscriptBox["Q1", "2"], "+", 
+        SuperscriptBox["Q2", "2"]}]]}]},
+    {
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"2", " ", "Q1", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"P2", " ", "Q1"}], "+", 
+           RowBox[{"P1", " ", "Q2"}]}], ")"}]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["Q1", "2"], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}], "2"]]}], "+", 
+      FractionBox["P2", 
+       RowBox[{
+        SuperscriptBox["Q1", "2"], "+", 
+        SuperscriptBox["Q2", "2"]}]]}], 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"2", " ", "Q2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"P2", " ", "Q1"}], "+", 
+           RowBox[{"P1", " ", "Q2"}]}], ")"}]}], 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["Q1", "2"], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}], "2"]]}], "+", 
+      FractionBox["P1", 
+       RowBox[{
+        SuperscriptBox["Q1", "2"], "+", 
+        SuperscriptBox["Q2", "2"]}]]}], 
+     FractionBox["Q2", 
+      RowBox[{
+       SuperscriptBox["Q1", "2"], "+", 
+       SuperscriptBox["Q2", "2"]}]], 
+     FractionBox["Q1", 
+      RowBox[{
+       SuperscriptBox["Q1", "2"], "+", 
+       SuperscriptBox["Q2", "2"]}]]}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.9724467017697773`*^9, 3.972446711046493*^9}},
+ CellLabel->
+  "Out[43]//TableForm=",ExpressionUUID->"02161150-7d15-4588-ad9d-\
+1b9fdbb996f7"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Det", "@", "%"}], "//", "Simplify"}]], "Input",
+ CellChangeTimes->{3.972446724919197*^9},
+ CellLabel->"In[44]:=",ExpressionUUID->"a1424143-d014-4767-94c4-19c325cfd05f"],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{3.972446725603973*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"1add59f2-26e2-45c7-9a6d-43e2e8c10477"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "usata", " ", "estensione", " ", "della", " ", "sintassi", " ", "di", " ", 
+   "D"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.97244675056352*^9, 
+  3.9724467849499683`*^9}},ExpressionUUID->"17836ae0-afe9-47ad-81a5-\
+f1898b3e9da2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Information", "[", "D", "]"}]], "Input",
+ CellChangeTimes->{{3.972446765657723*^9, 3.972446772256118*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"eba6830b-b79d-4a17-85b8-d7d5e99ee00a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  StyleBox[
+   FrameBox[
+    DynamicModuleBox[{System`InformationDump`open$$ = True, 
+     System`InformationDump`mouseOver$$ = False}, 
+     PaneSelectorBox[{True->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox[
+             TagBox[
+              TooltipBox[
+               StyleBox["\<\" Symbol\"\>", "InformationRowLabel",
+                StripOnInput->False],
+               "\"Symbol\"",
+               TooltipStyle->"TextStyling"],
+              Annotation[#, "Symbol", "Tooltip"]& ], "InformationTitleText",
+             StripOnInput->False,
+             BaseStyle -> None],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"],
+                ImageSizeCache->{26., {7.26806640625, 18.73193359375}}], True->
+               
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"],
+                ImageSizeCache->{26., {7.26806640625, 18.73193359375}}]}, 
+               Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/D",
+              ButtonNote->"paclet:ref/D"],
+             "\"paclet:ref/D\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"x\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) gives the partial derivative \
+\\!\\(\\*RowBox[{\\\"\[PartialD]\\\", \\\"f\\\", \\\"/\\\", \\\"\[PartialD]\\\
+\", \\\"x\\\"}]\\). \\n\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"n\\\", \
+\\\"TI\\\"]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) gives the multiple derivative \
+\\!\\(\\*RowBox[{SuperscriptBox[\\\"\[PartialD]\\\", \\\"n\\\"], \\\"f\\\", \
+\\\"/\\\", \\\"\[PartialD]\\\", SuperscriptBox[\\\"x\\\", \\\"n\\\"]}]\\).\\n\
+\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \
+\\\"TI\\\"], \\\",\\\", StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\
+\\\"y\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \
+\\\"TR\\\"]}], \\\"]\\\"}]\\) gives the partial derivative \
+\\!\\(\\*RowBox[{\\\"\[CenterEllipsis]\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{\\\"\[PartialD]\\\", RowBox[{\\\"/\\\", RowBox[{\\\"\[PartialD]\\\", \
+\\\"y\\\"}]}]}], \\\")\\\"}], RowBox[{\\\"(\\\", RowBox[{\\\"\[PartialD]\\\", \
+RowBox[{\\\"/\\\", RowBox[{\\\"\[PartialD]\\\", \\\"x\\\"}]}]}], \\\")\\\"}], \
+\\\"\[ThinSpace]\\\", \\\"f\\\"}]\\).\\n\\!\\(\\*RowBox[{\\\"D\\\", \
+\\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"n\\\", \\\"TI\\\"]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"y\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"m\\\", \
+\\\"TI\\\"]}], \\\"}\\\"}], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\
+\"]}], \\\"]\\\"}]\\) gives the multiple partial derivative \\!\\(\\*RowBox[{\
+\\\"\[CenterEllipsis]\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[\\\"\[PartialD]\\\", \\\"m\\\"], RowBox[{\\\"/\\\", \
+RowBox[{\\\"\[PartialD]\\\", SuperscriptBox[\\\"y\\\", \\\"m\\\"]}]}]}], \
+\\\")\\\"}], RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"\[PartialD]\\\", \
+\\\"n\\\"], RowBox[{\\\"/\\\", RowBox[{\\\"\[PartialD]\\\", SuperscriptBox[\\\
+\"x\\\", \\\"n\\\"]}]}]}], \\\")\\\"}], \\\"\[ThinSpace]\\\", \\\"f\\\"}]\\).\
+\\n\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \
+\\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"x\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"x\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\
+\"TR\\\"]}], \\\"}\\\"}], \\\"}\\\"}]}], \\\"]\\\"}]\\) for a scalar \
+\\!\\(\\*StyleBox[\\\"f\\\", \\\"TI\\\"]\\) gives the vector derivative \
+\\!\\(\\*RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"\[PartialD]\\\", \
+RowBox[{\\\"f\\\", \\\"/\\\", RowBox[{\\\"\[PartialD]\\\", SubscriptBox[\\\"x\
+\\\", \\\"1\\\"]}]}]}], \\\",\\\", RowBox[{\\\"\[PartialD]\\\", RowBox[{\\\"f\
+\\\", \\\"/\\\", RowBox[{\\\"\[PartialD]\\\", SubscriptBox[\\\"x\\\", \\\"2\\\
+\"]}]}]}], \\\",\\\", \\\"\[Ellipsis]\\\"}], \\\")\\\"}]\\). \
+\\n\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \
+\\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", StyleBox[\\\"array\\\", \
+\\\"TI\\\"], \\\"}\\\"}]}], \\\"]\\\"}]\\) gives an array derivative.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          PaneBox[GridBox[{
+             {
+              
+              DynamicModuleBox[{System`InformationDump`open$$ = {
+               False, False, False, False, False, False}}, 
+               StyleBox[GridBox[{
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Documentation\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Documentation\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Documentation", "Tooltip"]& ], 
+                   TemplateBox[{
+                    
+                    TemplateBox[{
+                    "\"Local \[RightGuillemet]\"", "paclet:ref/D", 
+                    "paclet:ref/D", "Link", {
+                    LightDarkSwitched[
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]]}, 
+                    BaseStyle -> {
+                    LightDarkSwitched[
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]]}}, 
+                    "HyperlinkTemplate"], "\"  \"", 
+                    StyleBox[
+                    "\"|\"", "InformationRowLabel", StripOnInput -> False], 
+                    "\"  \"", 
+                    TemplateBox[{"\"Web \[RightGuillemet]\"", {
+                    URL["http://reference.wolfram.com/language/ref/D.html"], 
+                    None}, "http://reference.wolfram.com/language/ref/D.html",
+                     "Hyperlink", {
+                    LightDarkSwitched[
+                    RGBColor[0.9686274509803922, 0.4666666666666667, 0.]]}, 
+                    BaseStyle -> {
+                    LightDarkSwitched[
+                    RGBColor[0.0784313725490196, 0.1568627450980392, 0.6]]}}, 
+                    "HyperlinkTemplate"]},
+                    "RowDefault"]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Options\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Options\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Options", "Tooltip"]& ], 
+                   RowBox[{"NonConstants", "\[Rule]", 
+                    RowBox[{"{", "}"}]}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Attributes\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"Attributes\"",
+                    TooltipStyle->"TextStyling"],
+                    Annotation[#, "Attributes", "Tooltip"]& ], 
+                   RowBox[{"{", 
+                    RowBox[{"Protected", ",", "ReadProtected"}], "}"}]},
+                  {
+                   TagBox[
+                    TooltipBox[
+                    StyleBox["\<\" Full Name\"\>", "InformationRowLabel",
+                    StripOnInput->False],
+                    "\"FullName\"",
+                    TooltipStyle->"TextStyling"],
+                    
+                    Annotation[#, "FullName", 
+                    "Tooltip"]& ], "\<\"System`D\"\>"}
+                 },
+                 AutoDelete->False,
+                 GridBoxAlignment->{"Columns" -> {Right, Left}},
+                 GridBoxDividers->None,
+                 GridBoxItemSize->{"Columns" -> {Automatic, Automatic}},
+                 GridBoxSpacings->{"Columns" -> {
+                    Offset[0.27999999999999997`], {
+                    Offset[0.5599999999999999]}, 
+                    Offset[0.27999999999999997`]}, "Rows" -> {
+                    Offset[0.2], {
+                    Offset[0.8]}, 
+                    Offset[0.2]}}], "DialogStyle",
+                StripOnInput->False],
+               DynamicModuleValues:>{}]}
+            },
+            DefaultBaseStyle->"Column",
+            GridBoxAlignment->{"Columns" -> {{Left}}},
+            GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+            
+            GridBoxItemSize->{
+             "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+            GridBoxSpacings->{"Columns" -> {
+                Offset[0.27999999999999997`], {
+                 Offset[0.5599999999999999]}, 
+                Offset[0.27999999999999997`]}, "Rows" -> {
+                Offset[0.2], {
+                 Offset[3.6]}, 
+                Offset[0.2]}}],
+           FrameMargins->{{6, 6}, {6, 3}},
+           ScrollPosition->{0., 0.}], ""},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpener"],
+               ImageSizeCache->{20., {2.8017578125, 17.1982421875}}], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "UpPointerOpenerHot"],
+               ImageSizeCache->{20., {2.8017578125, 17.1982421875}}]}, 
+              Dynamic[System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, False],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          LightDarkSwitched[
+           GrayLevel[0.8]], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"], False->
+      TagBox[GridBox[{
+         {
+          ItemBox[
+           PaneBox[
+            StyleBox[
+             TagBox[
+              TooltipBox[
+               StyleBox["\<\" Symbol\"\>", "InformationRowLabel",
+                StripOnInput->False],
+               "\"Symbol\"",
+               TooltipStyle->"TextStyling"],
+              Annotation[#, "Symbol", "Tooltip"]& ], "InformationTitleText",
+             StripOnInput->False],
+            FrameMargins->{{4, 0}, {-1, 1}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], 
+          ItemBox[
+           PaneBox[
+            TooltipBox[
+             ButtonBox[
+              PaneSelectorBox[{False->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIcon"]], True->
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "InformationHelpIconHot"]]}, Dynamic[
+                CurrentValue["MouseOver"]]],
+              Appearance->None,
+              BaseStyle->"Link",
+              ButtonData->"paclet:ref/D",
+              ButtonNote->"paclet:ref/D"],
+             "\"paclet:ref/D\""],
+            FrameMargins->{{0, 4}, {0, 2}}],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           PaneBox[
+            
+            StyleBox["\<\"\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"x\\\", \
+\\\"TI\\\"]}], \\\"]\\\"}]\\) gives the partial derivative \
+\\!\\(\\*RowBox[{\\\"\[PartialD]\\\", \\\"f\\\", \\\"/\\\", \\\"\[PartialD]\\\
+\", \\\"x\\\"}]\\). \\n\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", \
+RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"n\\\", \
+\\\"TI\\\"]}], \\\"}\\\"}]}], \\\"]\\\"}]\\) gives the multiple derivative \
+\\!\\(\\*RowBox[{SuperscriptBox[\\\"\[PartialD]\\\", \\\"n\\\"], \\\"f\\\", \
+\\\"/\\\", \\\"\[PartialD]\\\", SuperscriptBox[\\\"x\\\", \\\"n\\\"]}]\\).\\n\
+\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \
+\\\"TI\\\"], \\\",\\\", StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\
+\\\"y\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \
+\\\"TR\\\"]}], \\\"]\\\"}]\\) gives the partial derivative \
+\\!\\(\\*RowBox[{\\\"\[CenterEllipsis]\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{\\\"\[PartialD]\\\", RowBox[{\\\"/\\\", RowBox[{\\\"\[PartialD]\\\", \
+\\\"y\\\"}]}]}], \\\")\\\"}], RowBox[{\\\"(\\\", RowBox[{\\\"\[PartialD]\\\", \
+RowBox[{\\\"/\\\", RowBox[{\\\"\[PartialD]\\\", \\\"x\\\"}]}]}], \\\")\\\"}], \
+\\\"\[ThinSpace]\\\", \\\"f\\\"}]\\).\\n\\!\\(\\*RowBox[{\\\"D\\\", \
+\\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \\\"TI\\\"], \\\",\\\", \
+RowBox[{\\\"{\\\", RowBox[{StyleBox[\\\"x\\\", \\\"TI\\\"], \\\",\\\", \
+StyleBox[\\\"n\\\", \\\"TI\\\"]}], \\\"}\\\"}], \\\",\\\", RowBox[{\\\"{\\\", \
+RowBox[{StyleBox[\\\"y\\\", \\\"TI\\\"], \\\",\\\", StyleBox[\\\"m\\\", \
+\\\"TI\\\"]}], \\\"}\\\"}], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\"TR\\\
+\"]}], \\\"]\\\"}]\\) gives the multiple partial derivative \\!\\(\\*RowBox[{\
+\\\"\[CenterEllipsis]\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{SuperscriptBox[\\\"\[PartialD]\\\", \\\"m\\\"], RowBox[{\\\"/\\\", \
+RowBox[{\\\"\[PartialD]\\\", SuperscriptBox[\\\"y\\\", \\\"m\\\"]}]}]}], \
+\\\")\\\"}], RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\"\[PartialD]\\\", \
+\\\"n\\\"], RowBox[{\\\"/\\\", RowBox[{\\\"\[PartialD]\\\", SuperscriptBox[\\\
+\"x\\\", \\\"n\\\"]}]}]}], \\\")\\\"}], \\\"\[ThinSpace]\\\", \\\"f\\\"}]\\).\
+\\n\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \
+\\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", RowBox[{\\\"{\\\", \
+RowBox[{SubscriptBox[StyleBox[\\\"x\\\", \\\"TI\\\"], StyleBox[\\\"1\\\", \
+\\\"TR\\\"]], \\\",\\\", SubscriptBox[StyleBox[\\\"x\\\", \\\"TI\\\"], \
+StyleBox[\\\"2\\\", \\\"TR\\\"]], \\\",\\\", StyleBox[\\\"\[Ellipsis]\\\", \\\
+\"TR\\\"]}], \\\"}\\\"}], \\\"}\\\"}]}], \\\"]\\\"}]\\) for a scalar \
+\\!\\(\\*StyleBox[\\\"f\\\", \\\"TI\\\"]\\) gives the vector derivative \
+\\!\\(\\*RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"\[PartialD]\\\", \
+RowBox[{\\\"f\\\", \\\"/\\\", RowBox[{\\\"\[PartialD]\\\", SubscriptBox[\\\"x\
+\\\", \\\"1\\\"]}]}]}], \\\",\\\", RowBox[{\\\"\[PartialD]\\\", RowBox[{\\\"f\
+\\\", \\\"/\\\", RowBox[{\\\"\[PartialD]\\\", SubscriptBox[\\\"x\\\", \\\"2\\\
+\"]}]}]}], \\\",\\\", \\\"\[Ellipsis]\\\"}], \\\")\\\"}]\\). \
+\\n\\!\\(\\*RowBox[{\\\"D\\\", \\\"[\\\", RowBox[{StyleBox[\\\"f\\\", \
+\\\"TI\\\"], \\\",\\\", RowBox[{\\\"{\\\", StyleBox[\\\"array\\\", \
+\\\"TI\\\"], \\\"}\\\"}]}], \\\"]\\\"}]\\) gives an array derivative.\"\>", 
+             "InformationUsageText",
+             StripOnInput->False,
+             LineSpacing->{1.5, 1.5, 3.}],
+            FrameMargins->{{10, 10}, {8, 10}}],
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False], 
+          ItemBox["\<\"\"\>",
+           BaseStyle->"InformationUsageSubtitleBackground",
+           StripOnInput->False]},
+         {
+          ItemBox[
+           TagBox[
+            ButtonBox[
+             PaneSelectorBox[{False->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpener"]], True->
+              
+              DynamicBox[FEPrivate`FrontEndResource[
+               "FEBitmaps", "DownPointerOpenerHot"]]}, Dynamic[
+              System`InformationDump`mouseOver$$]],
+             Alignment->Left,
+             Appearance->{"Default" -> None},
+             
+             ButtonFunction:>FEPrivate`Set[
+              System`InformationDump`open$$, True],
+             Evaluator->Automatic,
+             FrameMargins->{{9, 0}, {0, 0}},
+             ImageMargins->0,
+             ImageSize->Full,
+             Method->"Preemptive"],
+            
+            EventHandlerTag[{
+             "MouseEntered" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, True], 
+              "MouseExited" :> 
+              FEPrivate`Set[System`InformationDump`mouseOver$$, False], 
+              Method -> "Preemptive", PassEventsDown -> Automatic, 
+              PassEventsUp -> True}]],
+           BaseStyle->"InformationTitleBackground",
+           StripOnInput->False], "\[SpanFromLeft]"}
+        },
+        AutoDelete->False,
+        FrameStyle->Directive[
+          LightDarkSwitched[
+           GrayLevel[0.8]], 
+          Thickness[Tiny]],
+        GridBoxAlignment->{"Columns" -> {Left, Right}, "Rows" -> {{Center}}},
+        GridBoxDividers->{
+         "Columns" -> {{None}}, "Rows" -> {False, {True}, False}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"]}, Dynamic[System`InformationDump`open$$],
+      BaselinePosition->Baseline,
+      FrameMargins->0,
+      ImageSize->Automatic],
+     DynamicModuleValues:>{}],
+    BaseStyle->"InformationGridFrame",
+    StripOnInput->False], "InformationGridPlain",
+   StripOnInput->False],
+  InformationData[<|
+   "ObjectType" -> "Symbol", "Usage" -> 
+    "\!\(\*RowBox[{\"D\", \"[\", RowBox[{StyleBox[\"f\", \"TI\"], \",\", \
+StyleBox[\"x\", \"TI\"]}], \"]\"}]\) gives the partial derivative \
+\!\(\*RowBox[{\"\[PartialD]\", \"f\", \"/\", \"\[PartialD]\", \"x\"}]\). \n\!\
+\(\*RowBox[{\"D\", \"[\", RowBox[{StyleBox[\"f\", \"TI\"], \",\", RowBox[{\"{\
+\", RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"n\", \"TI\"]}], \
+\"}\"}]}], \"]\"}]\) gives the multiple derivative \
+\!\(\*RowBox[{SuperscriptBox[\"\[PartialD]\", \"n\"], \"f\", \"/\", \"\
+\[PartialD]\", SuperscriptBox[\"x\", \"n\"]}]\).\n\!\(\*RowBox[{\"D\", \"[\", \
+RowBox[{StyleBox[\"f\", \"TI\"], \",\", StyleBox[\"x\", \"TI\"], \",\", \
+StyleBox[\"y\", \"TI\"], \",\", StyleBox[\"\[Ellipsis]\", \"TR\"]}], \
+\"]\"}]\) gives the partial derivative \!\(\*RowBox[{\"\[CenterEllipsis]\", \
+\" \", RowBox[{\"(\", RowBox[{\"\[PartialD]\", RowBox[{\"/\", RowBox[{\"\
+\[PartialD]\", \"y\"}]}]}], \")\"}], RowBox[{\"(\", RowBox[{\"\[PartialD]\", \
+RowBox[{\"/\", RowBox[{\"\[PartialD]\", \"x\"}]}]}], \")\"}], \
+\"\[ThinSpace]\", \"f\"}]\).\n\!\(\*RowBox[{\"D\", \"[\", \
+RowBox[{StyleBox[\"f\", \"TI\"], \",\", RowBox[{\"{\", \
+RowBox[{StyleBox[\"x\", \"TI\"], \",\", StyleBox[\"n\", \"TI\"]}], \"}\"}], \
+\",\", RowBox[{\"{\", RowBox[{StyleBox[\"y\", \"TI\"], \",\", StyleBox[\"m\", \
+\"TI\"]}], \"}\"}], \",\", StyleBox[\"\[Ellipsis]\", \"TR\"]}], \"]\"}]\) \
+gives the multiple partial derivative \!\(\*RowBox[{\"\[CenterEllipsis]\", \" \
+\", RowBox[{\"(\", RowBox[{SuperscriptBox[\"\[PartialD]\", \"m\"], \
+RowBox[{\"/\", RowBox[{\"\[PartialD]\", SuperscriptBox[\"y\", \"m\"]}]}]}], \
+\")\"}], RowBox[{\"(\", RowBox[{SuperscriptBox[\"\[PartialD]\", \"n\"], \
+RowBox[{\"/\", RowBox[{\"\[PartialD]\", SuperscriptBox[\"x\", \"n\"]}]}]}], \
+\")\"}], \"\[ThinSpace]\", \"f\"}]\).\n\!\(\*RowBox[{\"D\", \"[\", \
+RowBox[{StyleBox[\"f\", \"TI\"], \",\", RowBox[{\"{\", RowBox[{\"{\", \
+RowBox[{SubscriptBox[StyleBox[\"x\", \"TI\"], StyleBox[\"1\", \"TR\"]], \
+\",\", SubscriptBox[StyleBox[\"x\", \"TI\"], StyleBox[\"2\", \"TR\"]], \",\", \
+StyleBox[\"\[Ellipsis]\", \"TR\"]}], \"}\"}], \"}\"}]}], \"]\"}]\) for a \
+scalar \!\(\*StyleBox[\"f\", \"TI\"]\) gives the vector derivative \
+\!\(\*RowBox[{\"(\", RowBox[{RowBox[{\"\[PartialD]\", RowBox[{\"f\", \"/\", \
+RowBox[{\"\[PartialD]\", SubscriptBox[\"x\", \"1\"]}]}]}], \",\", RowBox[{\"\
+\[PartialD]\", RowBox[{\"f\", \"/\", RowBox[{\"\[PartialD]\", \
+SubscriptBox[\"x\", \"2\"]}]}]}], \",\", \"\[Ellipsis]\"}], \")\"}]\). \n\!\(\
+\*RowBox[{\"D\", \"[\", RowBox[{StyleBox[\"f\", \"TI\"], \",\", \
+RowBox[{\"{\", StyleBox[\"array\", \"TI\"], \"}\"}]}], \"]\"}]\) gives an \
+array derivative.", 
+    "Documentation" -> <|
+     "Local" -> "paclet:ref/D", "Web" -> 
+      "http://reference.wolfram.com/language/ref/D.html"|>, "OwnValues" -> 
+    None, "UpValues" -> None, "DownValues" -> None, "SubValues" -> None, 
+    "DefaultValues" -> None, "NValues" -> None, "FormatValues" -> None, 
+    "Options" -> {NonConstants -> {}}, 
+    "Attributes" -> {Protected, ReadProtected}, "FullName" -> "System`D"|>, 
+   True]]], "Output",
+ CellChangeTimes->{3.9724467726132936`*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"b2745b39-7c6e-4da2-b1de-599467e3de11"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["metodo programmatico", "Subsection",
+ CellChangeTimes->{{3.972446644768958*^9, 
+  3.972446647417334*^9}},ExpressionUUID->"2f01b38f-b0d0-411f-9f26-\
+42ab8561b00d"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"q1", "[", 
+   RowBox[{"Q1_", ",", "Q2_", ",", "P1_", ",", "P2_"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"Q1", "^", "2"}], "-", 
+    RowBox[{"Q2", "^", "2"}]}], "2"]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"q2", "[", 
+   RowBox[{"Q1_", ",", "Q2_", ",", "P1_", ",", "P2_"}], "]"}], ":=", 
+  RowBox[{"Q1", " ", "Q2"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p1", "[", 
+   RowBox[{"Q1_", ",", "Q2_", ",", "P1_", ",", "P2_"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"P1", " ", "Q1"}], "-", 
+    RowBox[{"P2", " ", "Q2"}]}], 
+   RowBox[{
+    RowBox[{"Q1", "^", "2"}], "+", 
+    RowBox[{"Q2", "^", "2"}]}]]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p2", "[", 
+   RowBox[{"Q1_", ",", "Q2_", ",", "P1_", ",", "P2_"}], "]"}], ":=", 
+  FractionBox[
+   RowBox[{
+    RowBox[{"P2", " ", "Q1"}], "+", 
+    RowBox[{"P1", " ", "Q2"}]}], 
+   RowBox[{
+    RowBox[{"Q1", "^", "2"}], "+", 
+    RowBox[{"Q2", "^", "2"}]}]]}]}], "Input",
+ CellChangeTimes->{{3.9718715302119713`*^9, 3.971871632457617*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"de127ed1-0980-4b54-abd3-b554234a8bb6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"s", "=", 
+  RowBox[{"Flatten", "@", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"ToExpression", "[", 
+      RowBox[{
+       RowBox[{"ToUpperCase", "@", "sym"}], "<>", "ind"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"sym", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<q\>\"", ",", "\"\<p\>\""}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ind", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<1\>\"", ",", "\"\<2\>\""}], "}"}]}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.9718719098173*^9, 3.971871923688711*^9}, {
+  3.97187196888556*^9, 3.9718719793298597`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"b6bcc8b6-8448-4d66-9f90-c00352ebd40c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"Q1", ",", "Q2", ",", "P1", ",", "P2"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.971871924169088*^9, {3.971871970549089*^9, 3.971871980319721*^9}},
+ CellLabel->"Out[30]=",ExpressionUUID->"ed7ce623-083c-4602-ba45-bf44a584699c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f", "=", 
+  RowBox[{"Flatten", "@", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"sym", "<>", "ind"}], "]"}], "[", 
+      RowBox[{"Sequence", "@@", "s"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"sym", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<q\>\"", ",", "\"\<p\>\""}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ind", ",", 
+       RowBox[{"{", 
+        RowBox[{"\"\<1\>\"", ",", "\"\<2\>\""}], "}"}]}], "}"}]}], 
+    "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.971871698884028*^9, 3.971871711344289*^9}, {
+  3.971871761742028*^9, 3.971871790328226*^9}, {3.971871821762542*^9, 
+  3.9718718536129713`*^9}, {3.971871890734494*^9, 3.97187189755223*^9}, {
+  3.971880318903905*^9, 3.971880330989711*^9}},
+ CellLabel->"In[41]:=",ExpressionUUID->"86a9bc83-6413-465e-be06-5b88680f630e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      SuperscriptBox["Q1", "2"], "-", 
+      SuperscriptBox["Q2", "2"]}], ")"}]}], ",", 
+   RowBox[{"Q1", " ", "Q2"}], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"P1", " ", "Q1"}], "-", 
+     RowBox[{"P2", " ", "Q2"}]}], 
+    RowBox[{
+     SuperscriptBox["Q1", "2"], "+", 
+     SuperscriptBox["Q2", "2"]}]], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"P2", " ", "Q1"}], "+", 
+     RowBox[{"P1", " ", "Q2"}]}], 
+    RowBox[{
+     SuperscriptBox["Q1", "2"], "+", 
+     SuperscriptBox["Q2", "2"]}]]}], "}"}]], "Output",
+ CellChangeTimes->{{3.971871838033663*^9, 3.971871854049416*^9}, {
+  3.971871891984734*^9, 3.971871898434668*^9}, {3.971880323523549*^9, 
+  3.9718803312944107`*^9}},
+ CellLabel->"Out[41]=",ExpressionUUID->"c1924841-75c9-422a-92b8-e946c238b30a"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "usando", " ", "pi\[UGrave]", " ", "semplice", " ", "definizione", " ", 
+   "di", " ", "D"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.972446807890217*^9, 
+  3.9724468155073147`*^9}},ExpressionUUID->"6cf2891d-d713-4b01-9b2b-\
+43f599b08f9c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{"jac", "=", 
+     RowBox[{"Outer", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"D", "[", 
+         RowBox[{"#1", ",", "#2"}], "]"}], "&"}], ",", "f", ",", "s"}], 
+      "]"}]}], ")"}], "//", "Simplify"}], "//", "MatrixForm"}]], "Input",
+ CellChangeTimes->{{3.9718719329800253`*^9, 3.971871954211132*^9}, {
+  3.971872002918775*^9, 3.971872041629979*^9}, {3.971880221209738*^9, 
+  3.971880222494673*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"d89113c0-a0a3-4a65-9fdf-25786f3496d1"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"Q1", 
+      RowBox[{"-", "Q2"}], "0", "0"},
+     {"Q2", "Q1", "0", "0"},
+     {
+      FractionBox[
+       RowBox[{
+        RowBox[{"2", " ", "P2", " ", "Q1", " ", "Q2"}], "+", 
+        RowBox[{"P1", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["Q1", "2"]}], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}]}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["Q1", "2"], "+", 
+          SuperscriptBox["Q2", "2"]}], ")"}], "2"]], 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", "P1", " ", "Q1", " ", "Q2"}], "+", 
+        RowBox[{"P2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["Q1", "2"]}], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}]}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["Q1", "2"], "+", 
+          SuperscriptBox["Q2", "2"]}], ")"}], "2"]], 
+      FractionBox["Q1", 
+       RowBox[{
+        SuperscriptBox["Q1", "2"], "+", 
+        SuperscriptBox["Q2", "2"]}]], 
+      RowBox[{"-", 
+       FractionBox["Q2", 
+        RowBox[{
+         SuperscriptBox["Q1", "2"], "+", 
+         SuperscriptBox["Q2", "2"]}]]}]},
+     {
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", "P1", " ", "Q1", " ", "Q2"}], "+", 
+        RowBox[{"P2", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["Q1", "2"]}], "+", 
+           SuperscriptBox["Q2", "2"]}], ")"}]}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["Q1", "2"], "+", 
+          SuperscriptBox["Q2", "2"]}], ")"}], "2"]], 
+      FractionBox[
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "2"}], " ", "P2", " ", "Q1", " ", "Q2"}], "+", 
+        RowBox[{"P1", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox["Q1", "2"], "-", 
+           SuperscriptBox["Q2", "2"]}], ")"}]}]}], 
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["Q1", "2"], "+", 
+          SuperscriptBox["Q2", "2"]}], ")"}], "2"]], 
+      FractionBox["Q2", 
+       RowBox[{
+        SuperscriptBox["Q1", "2"], "+", 
+        SuperscriptBox["Q2", "2"]}]], 
+      FractionBox["Q1", 
+       RowBox[{
+        SuperscriptBox["Q1", "2"], "+", 
+        SuperscriptBox["Q2", "2"]}]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.971871954883271*^9, 3.971872042192244*^9}, 
+   3.971880222815729*^9},
+ CellLabel->
+  "Out[38]//MatrixForm=",ExpressionUUID->"2b96691d-71f4-45ef-b6fd-\
+e0b76a320478"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Det", "@", "jac"}], "//", "Simplify"}]], "Input",
+ CellChangeTimes->{{3.971871876091659*^9, 3.9718719063339453`*^9}, {
+  3.9718720465812607`*^9, 3.9718720593851557`*^9}},
+ CellLabel->"In[37]:=",ExpressionUUID->"964ab3a2-e9f0-4fe4-976b-13d3253debcc"],
+
+Cell[BoxData["1"], "Output",
+ CellChangeTimes->{{3.9718720497852793`*^9, 3.971872059691263*^9}},
+ CellLabel->"Out[37]=",ExpressionUUID->"ba4fcfc1-55a5-4409-a746-bcf882861b77"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+},
+WindowSize->{1532, 807},
+WindowMargins->{{Automatic, 0}, {Automatic, 4}},
+Magnification:>2. Inherited,
+FrontEndVersion->"14.3 for Mac OS X x86 (64-bit) (July 8, 2025)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"68e5710a-2732-47bc-9861-714eb4bddfa4"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[576, 22, 161, 3, 132, "Section",ExpressionUUID->"d04b40b8-8cc1-47a3-8a5e-a6d91653fafb"],
+Cell[CellGroupData[{
+Cell[762, 29, 163, 3, 106, "Subsection",ExpressionUUID->"cbe94529-6718-4723-b309-3d04f2526cbc"],
+Cell[928, 34, 915, 29, 285, "Input",ExpressionUUID->"9c81479e-5f9d-4fdc-a771-fb708c84c00e"],
+Cell[CellGroupData[{
+Cell[1868, 67, 435, 11, 58, "Input",ExpressionUUID->"80be0afe-c0e0-47b0-9ebc-ea0deb7a386e"],
+Cell[2306, 80, 3238, 106, 231, "Output",ExpressionUUID->"02161150-7d15-4588-ad9d-1b9fdbb996f7"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5581, 191, 203, 4, 58, "Input",ExpressionUUID->"a1424143-d014-4767-94c4-19c325cfd05f"],
+Cell[5787, 197, 149, 2, 66, "Output",ExpressionUUID->"1add59f2-26e2-45c7-9a6d-43e2e8c10477"]
+}, Open  ]],
+Cell[5951, 202, 273, 7, 58, "Input",ExpressionUUID->"17836ae0-afe9-47ad-81a5-f1898b3e9da2"],
+Cell[CellGroupData[{
+Cell[6249, 213, 209, 3, 58, "Input",ExpressionUUID->"eba6830b-b79d-4a17-85b8-d7d5e99ee00a"],
+Cell[6461, 218, 22197, 447, 559, "Output",ExpressionUUID->"b2745b39-7c6e-4da2-b1de-599467e3de11"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28707, 671, 168, 3, 106, "Subsection",ExpressionUUID->"2f01b38f-b0d0-411f-9f26-42ab8561b00d"],
+Cell[28878, 676, 1148, 33, 285, "Input",ExpressionUUID->"de127ed1-0980-4b54-abd3-b554234a8bb6"],
+Cell[CellGroupData[{
+Cell[30051, 713, 712, 19, 99, "Input",ExpressionUUID->"b6bcc8b6-8448-4d66-9f90-c00352ebd40c"],
+Cell[30766, 734, 267, 5, 66, "Output",ExpressionUUID->"ed7ce623-083c-4602-ba45-bf44a584699c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31070, 744, 888, 22, 99, "Input",ExpressionUUID->"86a9bc83-6413-465e-be06-5b88680f630e"],
+Cell[31961, 768, 888, 27, 91, "Output",ExpressionUUID->"c1924841-75c9-422a-92b8-e946c238b30a"]
+}, Open  ]],
+Cell[32864, 798, 282, 7, 58, "Input",ExpressionUUID->"6cf2891d-d713-4b01-9b2b-43f599b08f9c"],
+Cell[CellGroupData[{
+Cell[33171, 809, 554, 14, 58, "Input",ExpressionUUID->"d89113c0-a0a3-4a65-9fdf-25786f3496d1"],
+Cell[33728, 825, 3091, 98, 252, "Output",ExpressionUUID->"2b96691d-71f4-45ef-b6fd-e0b76a320478"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36856, 928, 284, 5, 58, "Input",ExpressionUUID->"964ab3a2-e9f0-4fe4-976b-13d3253debcc"],
+Cell[37143, 935, 175, 2, 66, "Output",ExpressionUUID->"ba4fcfc1-55a5-4409-a746-bcf882861b77"]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}
+]
+*)
+
