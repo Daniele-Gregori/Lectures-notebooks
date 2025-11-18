@@ -94,7 +94,7 @@ His essential idea has been that of having as foundation of the language not jus
 
 After a first partially failed attempt with the creation of SMP (Symbolic Manipulation Program), in 1986 Stephen founds the company Wolfram Research, which in 1988 finally launches the first version of Mathematica.
 
-Mathematica is an historical name, suggested to Stephen Wolfram by Steve Jobs, according to the principle: "Take the generic name for a thing and then romanticize it". However, in following decades, this software has become something much more general of the mere mathematics.
+Mathematica is an historical name, suggested to Stephen Wolfram by Steve Jobs, according to the principle: "Take the generic name for a thing and then romanticize it". However, in the following decades, this software has become something much more general than mere mathematics.
 
 Thus Stephen often defines the "Wolfram Language" as a "computational language", which amounts to a "notation" enabling its users to "think computationally", by analogy with how the invention of the mathematical notation, far from being trivial, has made easier the scientific thought and discoveries.
 
