@@ -81,14 +81,14 @@ Notes, exercises e notebooks realized with Wolfram Mathematica.
 
 ### License
 
-Recently the students at the University of Bologna can have a free a Wolfram campus license, as explained at [this page](https://www.unibo.it/it/studiare/vivere-luniversita-e-la-citta/agevolazioni-per-computer-tablet-e-software/mathematica-licenza-campus).
+Recently the students at the University of Bologna can access a free a Wolfram campus license, as explained at [this page](https://www.unibo.it/it/studiare/vivere-luniversita-e-la-citta/agevolazioni-per-computer-tablet-e-software/mathematica-licenza-campus).
 
 Freely available for everyone is also the [Wolfram Engine](https://www.wolfram.com/engine/index.php.en), but it can be used only from terminal.
 
 
 ### History
 
-Already since the end of the 1970s, the theoretical physicist Stephen Wolfram began developing a programming language for the automation of mathematical calculations, especially those very tricky of quantum field theory (QFT).
+Already since the end of the 1970s, the theoretical physicist Stephen Wolfram began developing a programming language for the automation of mathematical calculations, especially those very tricky of Quantum Field Theory (QFT).
 
 His essential idea has been that of having as foundation of the language not just data types and numerical calculations on them, but generic expressions and rules of symbolic manipulation on them. The analogy is precisely that of algebra in which, for example, one should consider 'x' as anything, rather than as a particular number or text.
 
@@ -96,11 +96,11 @@ After a first partially failed attempt with the creation of SMP (Symbolic Manipu
 
 Mathematica is an historical name, suggested to Stephen Wolfram by Steve Jobs, according to the principle: "Take the generic name for a thing and then romanticize it". However, in the following decades, this software has become something much more general than mere mathematics.
 
-Thus Stephen often defines the "Wolfram Language" as a "computational language", which amounts to a "notation" enabling its users to "think computationally", by analogy with how the invention of the mathematical notation, far from being trivial, has made easier the scientific thought and discoveries.
+Thus Stephen often defines the "Wolfram Language" as a "computational language", which amounts to a "notation" enabling its users to "think computationally", by analogy with how the invention of the mathematical notation, far from being trivial, has made easier the scientific thinking and discoveries.
 
 In fact nowadays the Wolfram Language contains over 6000 built-in functions, and often just knowing of their existence, suffices to simply applying them to some input data and thus effortessly create great things.
 
-(Besides these over 6500 built-in functions, developed internally by Wolfram Reserch with "painstaking" attention, it is possible to add further over 3000 "resource functions" contributed - also by who is writing, as shown in other [repository](https://github.com/Daniele-Gregori/ResourceFunctions) - and always reviewed and improved by the main company, in a way analogous to the "peer review" process, as for any scientific publication.)
+(Besides these over 6500 built-in functions, developed internally by Wolfram Research with "painstaking" attention, it is possible to add further over 3000 "resource functions" contributed - also by who is writing, as shown in another [repository](https://github.com/Daniele-Gregori/ResourceFunctions) - and always reviewed and improved by the main company, in a way analogous to the "peer-review" process, as for any scientific publication.)
 
 
 ### Learning Wolfram
@@ -145,4 +145,4 @@ Finally the widest source of learning is the Wolfram Language documentation, ver
 
 - [Wolfram Language Documentation](https://reference.wolfram.com/language/?source=nav)
 
-The punchline is that Wolfram Research has been able to sustain a software development philosophy somewhat opposite to that of the mainstream open source programming languages. Since by definition the developmente of these is not paid, they necessarily remain either very limited (for example Python has about only 1% of the built-in functions of the Wolfram Language), or left to the voluntary community development without expert revision. Then the common programmers must either spend a lot of time and seffort to learn all this messy and incomplete open source world, or worse end up to rely just to chatbots which risk to produce serious error and teach essentially nothing. Instead by experience I can guarantee that the learning curve of the Wolfram Language is much smoother, faster and enjoyable, because doubtlessly it is the most extended and curated "computational language". 
+The punchline is that Wolfram Research has been able to sustain a software development philosophy somewhat opposite to that of the mainstream open source programming languages. Since by definition the development of these is not paid, they necessarily remain either very limited (for example Python has about only 1% of the built-in functions of the Wolfram Language), or left to the voluntary community development without expert revision. Then the common programmers must either spend a lot of time and effort to learn all this messy and incomplete open source world, or worse end up to rely just to chatbots which risk to produce serious errors and teach essentially nothing. Instead by experience I can guarantee that the learning curve of the Wolfram Language is much smoother, faster and enjoyable, because doubtlessly it is the most extended and curated "computational language". 
